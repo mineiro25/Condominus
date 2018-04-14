@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <members>
+    <member name="M:innovasys.rssreader.RssManager.getRssFeeds">
+      <summary>Gets the RSS feeds.</summary>
+      <value>The RSS feeds.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssManager.AddFeed(java.lang.String)">
+      <summary>Creates a new 
+                <see cref="T:innovasys.rssreader.RssFeed" info="T:innovasys.rssreader.RssFeed" /> from a given url and adds it to the 
+                <see cref="M:innovasys.rssreader.RssManager.getRssFeeds" info="M:innovasys.rssreader.RssManager.getRssFeeds()" /> collection.
+            </summary>
+      <param name="url">The URL to the feed xml.</param>
+    </member>
+    <member name="M:innovasys.rssreader.RssManager.RemoveFeed(innovasys.rssreader.RssFeed)">
+      <summary>Removes an 
+                <see cref="T:innovasys.rssreader.RssFeed" info="T:innovasys.rssreader.RssFeed" /> from the 
+                <see cref="M:innovasys.rssreader.RssManager.getRssFeeds" info="M:innovasys.rssreader.RssManager.getRssFeeds()" /> collection.
+            </summary>
+      <param name="RssFeed">The 
+                <see cref="T:innovasys.rssreader.RssFeed" info="T:innovasys.rssreader.RssFeed" /> to remove.
+            </param>
+    </member>
+    <member name="M:innovasys.rssreader.RssManager.RemoveFeed(java.lang.String)">
+      <summary>Removes an 
+                <see cref="T:innovasys.rssreader.RssFeed" info="T:innovasys.rssreader.RssFeed" /> from the 
+                <see cref="M:innovasys.rssreader.RssManager.getRssFeeds" info="M:innovasys.rssreader.RssManager.getRssFeeds()" /> collection.
+            </summary>
+      <param name="name">The name of the 
+                <see cref="T:innovasys.rssreader.RssFeed" info="T:innovasys.rssreader.RssFeed" /> to remove.
+            </param>
+    </member>
+    <member name="M:innovasys.rssreader.RssManager.UpdateFeeds">
+      <summary>Downloads any new available 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> objects for every 
+                <see cref="T:innovasys.rssreader.RssFeed" info="T:innovasys.rssreader.RssFeed" /> in the 
+                <see cref="M:innovasys.rssreader.RssManager.getRssFeeds" info="M:innovasys.rssreader.RssManager.getRssFeeds()" /> collection.
+            </summary>
+    </member>
+    <member name="F:innovasys.rssreader.RssItemState.New">
+      <summary>A new 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" />.
+            </summary>
+    </member>
+    <member name="F:innovasys.rssreader.RssItemState.Unread">
+      <summary>An 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> not downloaded in the last update but still unread.
+            </summary>
+    </member>
+    <member name="F:innovasys.rssreader.RssItemState.Read">
+      <summary>An 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> that has ben viewed.
+            </summary>
+    </member>
+    <member name="T:innovasys.rssreader.RssItemState">
+      <summary>Defines the 3 different states than an 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> will be.
+            </summary>
+    </member>
+    <member name="M:innovasys.rssreader.RssItemCollection.ItemById(java.lang.String)">
+      <summary>Returns an item from a given id.</summary>
+      <param name="id">The id of the item to return.</param>
+    </member>
+    <member name="M:innovasys.rssreader.RssItemCollection.#ctor">
+      <summary>Initializes a new instance of the 
+                <see cref="RssItemCollection" /> class.
+            </summary>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.getTitle">
+      <summary>Gets the title.</summary>
+      <value>The title.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.getDescription">
+      <summary>Gets the description.</summary>
+      <value>The description.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.getLink">
+      <summary>Gets the link.</summary>
+      <value>The link.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.getModifiedOn">
+      <summary>Gets the modified on.</summary>
+      <value>The modified on.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.getId">
+      <summary>Gets the ID.</summary>
+      <value>The id.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.getState">
+      <summary>Gets or sets the state.</summary>
+      <value>The state.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.getParentFeed">
+      <summary>Gets or sets the parent feed.</summary>
+      <value>The parent feed.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.#ctor(java.lang.String,java.lang.String)">
+      <summary>Initializes a new instance of the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> class.
+            </summary>
+      <param name="title">The title of the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" />.
+            </param>
+      <param name="link">Link to the source behind the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" />.
+            </param>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.#ctor(java.lang.String,java.lang.String,java.lang.String,java.util.Date)">
+      <summary>Initializes a new instance of the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> class.
+            </summary>
+      <param name="title">The title of the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" />.
+            </param>
+      <param name="description">The description of the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" />.
+            </param>
+      <param name="link">Link to the source behind the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" />.
+            </param>
+      <param name="modifiedOn">The date that the item was published.</param>
+    </member>
+    <member name="M:innovasys.rssreader.RssItem.#ctor(java.lang.String,java.lang.String,java.lang.String,java.util.Date,innovasys.rssreader.RssItemState)">
+      <summary>Initializes a new instance of the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> class.
+            </summary>
+      <param name="title">The title of the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" />.
+            </param>
+      <param name="description">The description.</param>
+      <param name="link">Link to the source behind the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" />.
+            </param>
+      <param name="modifiedOn">The modified on.</param>
+      <param name="state">The 
+                <see cref="T:innovasys.rssreader.RssItemState" info="T:innovasys.rssreader.RssItemState" /> to set the item to.
+            </param>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeedCollection.ItemByName(java.lang.String)">
+      <summary>Returns an Item for a given name.</summary>
+      <param name="name">The name of the Item to return.</param>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeedCollection.#ctor">
+      <summary>Initializes a new instance of the 
+                <see cref="T:innovasys.rssreader.RssFeedCollection" info="T:innovasys.rssreader.RssFeedCollection" /> class.
+            </summary>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.getRssItems">
+      <summary>Gets the RSS items.</summary>
+      <value>The RSS items.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.getUrl">
+      <summary>Gets the URL.</summary>
+      <value>The URL.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.getDescription">
+      <summary>Gets the description.</summary>
+      <value>The description.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.getName">
+      <summary>Gets the name.</summary>
+      <value>The name.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.getModifiedOn">
+      <summary>Gets the modified on.</summary>
+      <value>The modified on.</value>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.UpdateFeed">
+      <summary>Retrieves any new 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> objects for this feed.
+            </summary>
+      <returns>A collection of 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> objects, with state set to New.
+            </returns>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.DeleteRssItem(innovasys.rssreader.RssItem)">
+      <summary>Deletes the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /></summary>
+      <param name="item">The 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> to delete.
+            </param>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.DeleteRssItem(java.lang.String)">
+      <summary>Deletes the 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" />.
+            </summary>
+      <param name="rssItemId">The 
+                <see cref="T:innovasys.rssreader.RssItem" info="T:innovasys.rssreader.RssItem" /> ID.
+            </param>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.GetRssXml(java.lang.String)">
+      <summary>Gets the RSS XML.</summary>
+      <param name="url">The URL.</param>
+    </member>
+    <member name="M:innovasys.rssreader.RssFeed.#ctor(java.lang.String)">
+      <summary>Initializes a new instance of the 
+                <see cref="T:innovasys.rssreader.RssFeed" info="T:innovasys.rssreader.RssFeed" /> class.
+            </summary>
+      <param name="url">The Url to download the rss feed xml from.</param>
+    </member>
+  </members>
+</doc>
